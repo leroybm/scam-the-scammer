@@ -8,7 +8,7 @@ Ao acessar o site vi que era uma replica de um login da caixa, preenchi umas inf
 
  * É enviado uma request para um endpoint com UUID especifico da pessoa que logou
  * Funciona somente em celulares
- * É criado uma sessão setando cookies pelo backend
+ * É criado uma sessão setando cookies pelo backend, esse cookie é compratilhado pelo dominio do site, e só é possivel alterar ele fechando e reabrindo o navegador 
  * Ao logar, é mandado um POST para um endpoint, que retorna sempre 422 se ocorreu sucesso
 
 Infelizmente não consigo resetar o cookie de autenticação para enviar requests direto pelo console do navegador, então fiz um loop pelo pupeteer que abre um navegador fingindo ser um iPhone 6, conseguindo uma nova autenticação sempre e gerando CPF e senha falsa para enviar pro backend.
